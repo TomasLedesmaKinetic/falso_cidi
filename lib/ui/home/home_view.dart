@@ -25,47 +25,60 @@ class _HomeViewState extends State<HomeView> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.purple[100],
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_filled), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.file_copy_rounded), label: 'Documentos'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Cuenta'),
+          ]),
       body: Center(
         child: SizedBox(
           height: size.height * 0.9,
           width: size.width * 0.9,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Icon(
-                    Icons.person_rounded,
-                    color: Colors.white,
-                  ),
-                  Column(
-                    children: const [
-                      Text('Nombre y Apellido',
-                          style: TextStyle(color: Colors.white)),
-                      Text('Nivel x', style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: size.height * 0.02),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.purple[300],
+              Container(
+                margin: EdgeInsets.only(top: size.height * 0.02),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Icon(
+                      Icons.person_rounded,
+                      color: Colors.white,
                     ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: size.width * 0.05,
-                          vertical: size.height * 0.01),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Icon(Icons.add),
-                          Text('Subir Nivel'),
-                        ],
+                    Column(
+                      children: const [
+                        Text('Nombre y Apellido',
+                            style: TextStyle(color: Colors.white)),
+                        Text('Nivel x', style: TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                    Container(
+                      margin:
+                          EdgeInsets.symmetric(vertical: size.height * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: size.width * 0.05,
+                            vertical: size.height * 0.01),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: const [
+                            Icon(Icons.add),
+                            Text('Subir Nivel'),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Container(
                 margin: EdgeInsets.symmetric(vertical: size.height * 0.02),
@@ -86,6 +99,121 @@ class _HomeViewState extends State<HomeView> {
                   ),
                 ),
               ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: size.height * 0.02),
+                child: GridView(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                  ),
+                  shrinkWrap: true,
+                  children: [
+                    Container(
+                      height: size.height * 0.01,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.height * 0.03,
+                          horizontal: size.width * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_horiz_rounded)),
+                    ),
+                    Container(
+                      height: size.height * 0.01,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.height * 0.03,
+                          horizontal: size.width * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_horiz_rounded)),
+                    ),
+                    Container(
+                      height: size.height * 0.01,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.height * 0.03,
+                          horizontal: size.width * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_horiz_rounded)),
+                    ),
+                    Container(
+                      height: size.height * 0.01,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.height * 0.03,
+                          horizontal: size.width * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_horiz_rounded)),
+                    ),
+                    Container(
+                      height: size.height * 0.01,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.height * 0.03,
+                          horizontal: size.width * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_horiz_rounded)),
+                    ),
+                    Container(
+                      height: size.height * 0.01,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.height * 0.03,
+                          horizontal: size.width * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_horiz_rounded)),
+                    ),
+                    Container(
+                      height: size.height * 0.01,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.height * 0.03,
+                          horizontal: size.width * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_horiz_rounded)),
+                    ),
+                    Container(
+                      height: size.height * 0.01,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.height * 0.03,
+                          horizontal: size.width * 0.02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.purple[300],
+                      ),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.more_horiz_rounded)),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
