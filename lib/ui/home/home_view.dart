@@ -1,3 +1,4 @@
+import 'package:falso_cidi/ui/notificaciones/notificaciones_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
@@ -21,7 +22,13 @@ class _HomeViewState extends State<HomeView> {
           children: [
             Text(widget.title),
             IconButton(
-                onPressed: () {}, icon: const Icon(Icons.notifications_rounded))
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const NotificacionesView()));
+                },
+                icon: const Icon(Icons.notifications_rounded))
           ],
         ),
       ),
